@@ -1,0 +1,282 @@
+body {
+	background-color: #2a5a4c;
+	margin: 0;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: #fff;
+}
+
+.header {
+	background-color: #21745b;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#products {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+
+.product {
+	text-align: center;
+	margin: 10px;
+	background-color: #283830; /* Verde mais escuro para os produtos */
+	padding: 20px;
+	border-radius: 10px;
+	transition: transform 0.8s;
+}
+
+.product:hover {
+	transform: scale(1.15);
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+	transition: all 0.5s ease-in-out;
+}
+
+.product img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+.product h2 {
+	margin: 15px 0;
+}
+
+.product p {
+	margin: 5px 0;
+}
+
+.product button {
+	background-color: #21745b; /* Verde mais claro para o botão */
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.product button:hover {
+	background-color: #45a049; /* Verde mais escuro no hover */
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#cart {
+	margin: 20px;
+}
+
+.logo img {
+	max-width: 100%;
+	height: auto;
+}
+
+.top-bar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.top-bar li {
+	margin-right: 20px;
+}
+
+.top-bar a {
+	text-decoration: none;
+	color: #fff;
+	transition: color 0.3s ease-in-out;
+}
+
+.top-bar a:hover {
+	background-color: #45a049; /* Verde mais escuro no hover */
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+	transition: all 0.5s ease-in-out;
+}
+
+footer {
+	background-color: #2a5a4c;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.removeFromCartBtn {
+	background-color: #21745b; /* Verde mais claro para o botão */
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-top: 5px;
+}
+
+.removeFromCartBtn:hover {
+	background-color: #45a049; /* Cor de fundo vermelha (exemplo) */
+	color: #ffffff; /* Cor do texto branca (exemplo) */
+	border: none;
+	padding: 10px 10px; /* Adicione preenchimento para melhorar a aparência */
+	cursor: pointer;
+}
+
+.cart-popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(182, 182, 182, 0.2);
+	z-index: 1000;
+}
+
+.cartBtn {
+	background-color: #21745b; /* Verde mais claro para o botão */
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-top: 5px;
+}
+
+.cartBtn:hover {
+	background-color: #21745b; /* Verde mais claro para o botão */
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin-top: 5px;
+}
+
+#cartContainer {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	width: 430px;
+	background-color: #21745b; /* Adicionado ponto e vírgula no final */
+	box-shadow: 0 4 10px rgba(255, 255, 255, 0.2);
+	padding: 5px;
+	display: none;
+}
+
+#cartContent {
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+#closeCartBtn {
+	margin-top: 10px;
+	padding: 5px 10px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+}
+/* Estilos para a tag select */
+#size {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #21745b; /* Cor de fundo verde mais claro */
+	color: white;
+	cursor: pointer;
+	width: 70px; /* Ajuste conforme necessário */
+}
+
+/* Estilizar as opções dentro da tag select */
+#size option {
+	background-color: #283830; /* Cor de fundo verde mais escuro */
+	color: white;
+}
+
+/* Estilizar a seta do dropdown */
+#size::-ms-expand {
+	display: none; /* Oculta a seta no IE 10 e versões anteriores */
+}
+
+#size::after {
+	content: '\25BC'; /* Adiciona uma seta para baixo */
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	pointer-events: none; /* Garante que a seta não seja clicável */
+}
+
+/* Estilizar a borda quando o select estiver focado */
+#size:focus {
+	outline: none;
+	box-shadow: 0 0 5px rgba(149, 168, 162, 0.8); /* Adapte a sombra conforme necessário */
+}
+/* Efeito de hover para a tag select */
+#size:hover {
+	background-color: #45a049; /* Verde mais escuro no hover */
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+	transition: all 0.3s ease-in-out;
+}
+
+/* Efeito de hover para os botões dentro do select */
+#size:hover option {
+	background-color: #45a049; /* Verde mais escuro no hover */
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+	transition: all 0.3s ease-in-out;
+}
+.cartQuantityInput {
+	width: 30px;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 9px;
+	margin-right: 20px;
+	background-color: #21745b;
+	color: white;
+	margin-left: 30px;
+	vertical-align: middle; /* Alinha verticalmente */
+}
+.cartQuantityInput:focus {
+	outline: none; /* Remover a borda de foco padrão */
+	border-color: #21745b; /* Cor da borda ao receber foco */
+	box-shadow: 0 0 5px rgba(33, 116, 91, 0.5); /* Efeito de sombra ao receber foco */
+}
+.productBox {
+	text-align: center;
+	margin: 20px;
+	background-color: #283830; /* Verde mais escuro para os produtos */
+	padding: 20px;
+	border-radius: 10px;
+	transition: transform 0.8s;
+	background-color: #45a049; /* Verde mais escuro no hover */
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+	transition: all 0.8s ease-in-out;
+}
+.productBox:hover {
+	transform: scale(1.3);
+	box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+}
+.productBox h3 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.productBox p {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+/* Adicione este bloco de estilo ao seu arquivo de estilo CSS ou inclua diretamente no cabeçalho do seu HTML */
+.cartSizeInput {
+    transition: border-color 0.3s ease-in-out;
+}
+
+.cartSizeInput:hover {
+    border-color: #4CAF50; /* ou qualquer outra cor desejada */
+}

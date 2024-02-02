@@ -1,0 +1,77 @@
+body {
+	background-color: #2a5a4c;
+	margin: 0;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: #fff;
+}
+
+.header {
+	background-color: #21745b;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo img {
+	max-width: 100%;
+	height: auto;
+}
+
+.top-bar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.top-bar li {
+	margin-right: 20px;
+}
+
+.top-bar a {
+	text-decoration: none;
+	color: #fff;
+	transition: color 0.3s ease-in-out;
+}
+
+.top-bar a:hover {
+	background-color: #45a049; /* Verde mais escuro no hover */
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+	transition: all 0.5s ease-in-out;
+}
+
+.sustainability {
+	max-width: 1100px; /* Ajuste a largura conforme necessário */
+	margin: 50px auto;
+	background-color: #283830;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sustainability h2 {
+	text-align: center;
+	color: #fff; /* Adicione a cor desejada para o título */
+}
+
+.sustainability-content {
+	color: #fff; /* Adicione a cor desejada para o texto */
+	line-height: 2.5; /* Adicione espaçamento entre linhas */
+}
+.sustainability:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+	transition: transform 0.8s;
+}
+
+
+footer {
+	background-color: #2a5a4c;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+}

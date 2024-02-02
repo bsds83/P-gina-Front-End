@@ -1,0 +1,144 @@
+body {
+	background-color: #2a5a4c;
+	margin: 0;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logo {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+
+.logo img {
+	max-width: 100%;
+	height: auto;
+}
+
+.top-bar {
+	background-color: #21745b;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	transition: padding 1.5s ease-in-out;
+	box-sizing: border-box;
+}
+
+.top-bar:hover {
+	background-color: #45a049; /* Verde mais escuro no hover */
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+	transition: all 0.5s ease-in-out;
+}
+
+.top-bar__anchors {
+	flex-grow: 1;
+	text-align: center;
+	color: rgb(4, 43, 30);
+	transition: color 0.3s ease-in-out;
+}
+
+.top-bar__anchors:hover {
+	color: #fff;
+	
+}
+
+.top-bar__anchors a {
+	text-decoration: none;
+	color: rgb(4, 43, 30);
+}
+
+.top-bar__anchors a:hover {
+	color: #fff;
+	transition: color 0.3s ease-in-out;
+	
+}
+
+.weather-container {
+	margin: 50px auto;
+	padding: 20px;
+	width: 300px;
+	background-color: #21745b;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	
+}
+.weather-container:hover {
+	background-color: #45a049; /* Verde mais escuro no hover */
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+	transition: all 0.5s ease-in-out;
+	transform: scale(1.10);
+	
+}
+
+#local-temp,
+#local-desc {
+	margin: 10px 0;
+}
+#city-input {
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
+#search-button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #21745b;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#search-button:hover {
+	background-color: #45a049; /* Verde mais escuro no hover */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	transition: all 0.5s ease-in-out;
+}
+
+footer {
+	background-color: #2a5a4c;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+	.top-bar {
+		flex-direction: column;
+		align-items: stretch;
+		padding: 10px;
+	}
+
+	.top-bar__anchors {
+		text-align: left;
+		padding: 8px;
+	}
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.top-bar__anchors {
+	flex-grow: 1;
+	text-align: center;
+	color: rgb(4, 43, 30);
+	transition: color 0.3s ease-in-out;
+}
+
+.top-bar__anchors:hover {
+	color: #2c2828;
+}

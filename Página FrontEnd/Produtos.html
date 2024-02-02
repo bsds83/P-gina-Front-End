@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="CSS/Produtos.css" />
+		<title>Roupas Personalizáveis</title>
+		<style>
+			/* Adicione estilos para a janela de finalização da encomenda */
+			.checkoutWindow {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: white;
+				padding: 20px;
+				border: 1px solid #ddd;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				z-index: 9999;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<img src="Logos/Imagem3.png" width="150" alt="Selangel Logo" />
+			</div>
+			<nav class="top-bar">
+				<ul>
+					<li><a href="Indexx.html">Home</a></li>
+					<li><a href="quem_somos.html">Quem Somos</a></li>
+					<li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+					<li><a href="produtos.html">Produtos</a></li>
+					<li><a href="contato.html">Contato</a></li>
+					<li><a href="Newsletter.html">Newsletter</a></li>
+					<li><a href="#" id="cartBtn">Carrinho</a></li>
+				</ul>
+			</nav>
+		</div>
+		<section id="products">
+			<div class="product">
+				<img src="Logos/blusa.png" width="200" alt="Camisa" />
+				<h2>Camisa</h2>
+				<p>Camisa de algodão confortável.</p>
+				<br />
+				<p>Preço: €20.99</p>
+				<p>Escolha a cor:</p>
+				<input type="color" id="colorPicker1" />
+				<p>
+					Tamanho:
+					<select id="size">
+						<option value="s">S</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+					</select>
+				</p>
+
+				<button class="addToCartBtn" data-item="Camisa" data-name="Camisa" data-price="20.99">Adicionar ao Carrinho</button>
+			</div>
+
+			<div class="product">
+				<img src="Logos/corpete.png" width="155" alt="Corpete" />
+				<h2>Corpete</h2>
+				<p>Corpete de tecido sustentável.</p>
+				<br />
+				<p>Preço: €49.99</p>
+				<p>Escolha a cor:</p>
+				<input type="color" id="colorPicker2" />
+				<p>
+					Cintura:
+					<select id="size">
+						<option value="s">61cm</option>
+						<option value="m">65cm</option>
+						<option value="l">69cm</option>
+						<option value="xl">73cm</option>
+						<option value="xxl">77cm</option>
+					</select>
+				</p>
+
+				<button class="addToCartBtn" data-item="Corpete" data-name="Corpete" data-price="49.99">Adicionar ao Carrinho</button>
+			</div>
+
+			<div class="product">
+				<img src="Logos/calça.png" width="150" alt="Calças" />
+				<h2>Calças</h2>
+				<p>Calça de cintura alta</p>
+				<br />
+				<p>Preço: €24.99</p>
+				<p>Escolha a cor:</p>
+				<input type="color" id="colorPicker3" />
+				<p>
+					Cintura:
+					<select id="size">
+						<option value="s">36</option>
+						<option value="m">38</option>
+						<option value="l">40</option>
+						<option value="xl">42</option>
+						<option value="xxl">44</option>
+					</select>
+				</p>
+
+				<button class="addToCartBtn" data-item="Calças" data-name="Calças" data-price="24.99">Adicionar ao Carrinho</button>
+			</div>
+
+			<div class="product">
+				<img src="Logos/chapéu.png" width="200" alt="Chapéus" />
+				<h2>Chapéus</h2>
+				<p>Chapéus</p>
+				<br />
+				<p>Preço: €19.99</p>
+				<p>Escolha a cor:</p>
+				<input type="color" id="colorPicker4" />
+				<p>
+					Cintura:
+					<select id="size">
+						<option value="s">S</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+					</select>
+				</p>
+
+				<button class="addToCartBtn" data-item="Chapéus" data-name="Chapéus" data-price="19.99">Adicionar ao Carrinho</button>
+			</div>
+
+			<div class="product">
+				<img src="Logos/sapatos.png" width="200" alt="Sapatos" />
+				<h2>Sapatos</h2>
+				<p>Sapatos</p>
+				<br />
+				<p>Preço: €19.99</p>
+				<p>Escolha a cor:</p>
+				<input type="color" id="colorPicker5" />
+				<p>
+					Sapatos:
+					<select id="size">
+						<option value="s">S</option>
+						<option value="m">M</option>
+						<option value="l">L</option>
+					</select>
+				</p>
+
+				<button class="addToCartBtn" data-item="Sapatos" data-name="Sapatos" data-price="19.99">Adicionar ao Carrinho</button>
+			</div>
+
+			<!-- Adicione mais produtos aqui -->
+		</section>
+
+		<footer>
+			<div class="footer-content">
+				<p>&copy; 2024 Selangel. Todos os direitos reservados.</p>
+			</div>
+		</footer>
+		<div id="cartContainer" class="cart-container">
+			<div id="cartContent" class="cart-content">
+				<h2>Carrinho</h2>
+				<ul id="cartItemsList"></ul>
+				<button id="closeCartBtn">Fechar</button>
+			</div>
+			<div id="totalPrice"></div>
+		</div>
+		
+		<script src="JS/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="CSS/mainn.css" />
+		<title>Welcome to Selangel</title>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script>
+			function buscarTempo() {
+				const apiKey = '977d3a3c79e83fb6012e7f93ab32719d';
+				const cidadeInput = document.getElementById('city-input').value;
+
+				// Verifique se o campo de entrada não está vazio antes de fazer a solicitação
+				if (cidadeInput.trim() === '') {
+					alert('Por favor, insira o nome da cidade.');
+					return;
+				}
+
+				const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cidadeInput}&appid=${apiKey}&units=metric`;
+
+				axios
+					.get(apiUrl)
+					.then(response => {
+						const cidadeNome = response.data.name;
+						const temperatura = response.data.main.temp;
+						const descricao = response.data.weather[0].description;
+
+						// Atualizando o nome da cidade e outros dados na página
+						document.getElementById('local-city').innerHTML = ` ${cidadeNome}`;
+						document.getElementById('local-temp').innerHTML = `Temperatura: ${temperatura} °C`;
+						document.getElementById('local-desc').innerHTML = `Descrição: ${descricao}`;
+					})
+					.catch(error => {
+						console.error('Erro ao obter dados do tempo:', error);
+					});
+			}
+		</script>
+	</head>
+	<body>
+		<div class="logo">
+			<img src="Logos/Imagem3.png" width="700px" alt="Selangel Logo" />
+		</div>
+		<div>
+			<ul class="top-bar">
+				<li class="top-bar__anchors"><a href="quem_somos.html">Quem Somos</a></li>
+				<li class="top-bar__anchors"><a href="Sustentabilidade.html">Sustentabilidade</a></li>
+				<li class="top-bar__anchors"><a href="Produtos.html">Produtos</a></li>
+				<li class="top-bar__anchors"><a href="contato.html">Contato</a></li>
+				<li class="top-bar__anchors"><a href="Newsletter.html">Newsletter</a></li>
+			</ul>
+		</div>
+		<br />
+		<div class="weather-container">
+			<h2 id="local-city">Cidade</h2>
+			<p id="local-temp">Temperatura</p>
+			<p id="local-desc">Tempo</p>
+			<input type="text" id="city-input" placeholder="Digite o nome da cidade" />
+			<button id="search-button" onclick="buscarTempo()">Buscar Tempo</button>
+		</div>
+
+		<footer>
+			<div class="footer-content">
+				<p>&copy; 2024 Selangel. Todos os direitos reservados.</p>
+			</div>
+		</footer>
+	</body>
+</html>
